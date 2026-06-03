@@ -1,0 +1,138 @@
+/* style.css – digunakan bersama oleh semua halaman */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* ── Navigasi ── */
+nav {
+    background: #1a3c5e;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+    font-size: 14px;
+    transition: background .2s;
+}
+nav a:hover, nav a.active { background: #2a6496; border-radius: 4px; }
+nav .brand { font-weight: 700; font-size: 16px; margin-right: 20px; letter-spacing: .5px; }
+
+/* ── Container utama ── */
+.wrapper {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+/* ── Card ── */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 22px;
+    color: #1a3c5e;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #2a6496;
+    padding-bottom: 8px;
+}
+
+/* ── Tombol ── */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    border: none;
+    transition: opacity .2s;
+}
+.btn:hover { opacity: .85; }
+.btn-primary  { background: #2a6496; color: #fff; }
+.btn-success  { background: #27ae60; color: #fff; }
+.btn-warning  { background: #e67e22; color: #fff; }
+.btn-danger   { background: #c0392b; color: #fff; }
+.btn-sm       { padding: 4px 10px; font-size: 12px; }
+
+/* ── Form ── */
+.form-group { margin-bottom: 14px; }
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color .2s;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #2a6496;
+}
+.form-group input[disabled] { background: #eee; cursor: not-allowed; }
+
+/* ── Tabel ── */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+thead tr { background: #1a3c5e; color: #fff; }
+thead th { padding: 10px 12px; text-align: left; }
+tbody tr:nth-child(even) { background: #f7fafc; }
+tbody tr:hover { background: #eaf1f8; }
+tbody td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+
+/* ── Search bar ── */
+.search-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    align-items: center;
+}
+.search-bar input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.search-bar input:focus { outline: none; border-color: #2a6496; }
+
+/* ── Alert ── */
+.alert {
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    font-size: 13px;
+}
+.alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-danger   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* ── Badge ── */
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-info { background: #d1ecf1; color: #0c5460; }
